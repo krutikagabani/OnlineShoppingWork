@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count vowels</title>
+    <script>
+        function countvowels()
+        {
+            var count=0;
+            var vowels = ['a','e','i','s','u','h','o','k','e','s','a','r','o','m'];
+            for(var i=0;i < vowels.length;i++)
+            {
+               if(vowels[i]=="a" || vowels[i]=="e" || vowels[i]=="i" || vowels[i]=="o" || vowels[i]=="u")
+               {
+                   count++;
+               }
+            }
+            document.getElementById("vowel").innerHTML = vowels+"<br/>"+ "<br/>" +"Total :" +count;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="countvowels();">Click to count vowels</button>
+    <h1 id="vowel"></h1>
+</body>
+</html>

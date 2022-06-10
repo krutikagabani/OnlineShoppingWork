@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count vowels by Array</title>
+    <script>
+        function vowelscount()
+        {
+            var text = "JavaScript the Program to the Count the Number of Vowels in a String"
+            var data = text.split(" ");
+            var count=0;
+            for(var i=0;i<data.length;i++)
+            {
+                if(data[i]=="the")
+                {
+                    count++;
+                }
+            }
+            console.log("Total Words : "+count);
+
+            var a=[];
+            var e=[];
+            var ia=[];
+            var o=[];
+            var u=[];
+
+            for(var i=o;i<=text.length;i++)
+            {
+                if(text[i]=='a' || text[i]=='A')
+                {
+                    a.push(text[i]);
+                }
+                if(text[i]=='e' || text[i]=='E')
+                {
+                    e.push(text[i]);
+                }
+                if(text[i]=='i' || text[i]=='I')
+                {
+                    ia.push(text[i]);
+                }
+                if(text[i]=='o' || text[i]=='O')
+                {
+                    o.push(text[i]);
+                }
+                if(text[i]=='u' || text[i]=='U')
+                {
+                    u.push(text[i]);
+                }
+            }
+            
+            document.getElementById("text").innerHTML = text + "<br/>" +" <br/>"
+            document.getElementById("count1").innerHTML = "Vowels a :"+a.length;
+            document.getElementById("count2").innerHTML = "Vowels e :"+e.length;
+            document.getElementById("count3").innerHTML = "Vowels i :"+ia.length;
+            document.getElementById("count4").innerHTML = "Vowels o :"+o.length;
+            document.getElementById("count5").innerHTML = "Vowels u :"+u.length;
+        }
+    </script>
+    
+</head>
+<body>
+    <button type="button" onclick="vowelscount();">Press It</button>
+    <h1 id="text"></h1>
+    <h1 id="count1"></h1>
+    <h1 id="count2"></h1>
+    <h1 id="count3"></h1>
+    <h1 id="count4"></h1>
+    <h1 id="count5"></h1>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+
+    <script>
+
+        function conclusion()
+        {
+            var name = document.getElementById("text1").value;
+            var rollno =document.getElementById("roll").value;
+            var n1 = document.getElementById("marksn1").value;
+            var n2 = document.getElementById("marksn2").value;
+            var n3 = document.getElementById("marksn3").value;
+            var total = parseInt(n1) + parseInt(n2) + parseInt(n3);
+            var percentage = total/3;
+           document.getElementById("result").innerHTML="NAME :"+name+"<br/>"+"ROLL NO :"+rollno+"<br/>"+"MATH'S :"+n1+"<br/>"+"ENGLISH :"+n2+"<br/>"+"SCIENCE :"+n3+"<br/>"+"TOTAl :"+
+           total+"<br/>"+"PERCENTAGE :"+percentage;           
+        
+            if(percentage>=70)
+            {
+                document.getElementById("grade").innerHTML= "distinction";
+            }
+            else if(percentage>=60)
+            {
+                document.getElementById("grade").innerHTML= "firstclass";
+            }
+            else if(percentage>=50)
+            {
+                document.getElementById("grade").innerHTML= "secondclass";
+            }
+            else if(percentage>=40)
+            {
+                document.getElementById("grade").innerHTML="pass";
+            }
+            else
+            {
+                document.getElementById("grade").innerHTML="fail";
+            }
+        } 
+        
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>NAME : </td>
+            <td>
+                <input type="text" id="text1">
+            </td>
+        </tr>
+        <tr>
+            <td>ROLL NO : </td>
+            <td>
+                <input type="text" id="roll">
+            </td>
+        </tr>
+        <tr>
+            <td>MATH'S : </td>
+            <td>
+                <input type="text" id="marksn1">
+            </td>
+        </tr>
+        <tr>
+            <td>ENGLISH : </td>
+            <td>
+                <input type="text" id="marksn2">
+            </td>
+        </tr>
+        <tr>
+            <td>SCIENCE : </td>
+            <td>
+                <input type="text" id="marksn3">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="conclusion();">RESULT</button>
+            </td>
+        </tr>
+    
+    </table><br/><br/>
+    <table border="1" cellpadding="10">
+        <h1 id="result"></h1>
+        <h2 id="grade"></h2>
+    </table>
+</body>
+</html>

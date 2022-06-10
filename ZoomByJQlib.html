@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom img by JQuery libraries</title>
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet"/>
+  <style type="text/css">
+    body { background-color:#fafafa;}
+        img{display: block;}
+        .imgBox{width: 300px;height: 300px;border: 1px solid #222;}
+    </style>
+</head>
+<body>
+  <div class="imgBox"><img src="img/ROSE.jpg" height="300px" width="300px" data-origin="img/ROSE.jpg"></div>
+  
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://www.jqueryscript.net/demo/Product-Zoom-On-Hover-Plugin-For-jQuery-imgZoom-js/jquery.imgzoom.js"></script>
+  <script type="text/javascript">
+    $('.imgBox').imgZoom({
+        boxWidth: 400,
+        boxHeight: 400,
+        marginLeft: 5,
+        origin: 'data-origin'
+    });
+</script>
+</body>
+</html>

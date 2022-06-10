@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Structure</title>
+
+    <script>
+        function myfunction()
+        {
+            var name = document.getElementById("name").value;
+            var department = document.getElementById("department").value;
+            var salary = document.getElementById("salary").value;
+            var hr=parseInt(salary)*5/100;
+            var pf1=parseInt(salary)*18/100;
+            var da1=parseInt(salary)*5/100;
+
+            var result= hr + da1;
+            var result1= pf1;
+
+            var netsal = parseInt(salary) + hr + da1 - pf1;
+            
+            if(netsal<=10000)
+            {
+                document.getElementById("condition").innerHTML= "lower";
+            }
+            else
+            {
+                document.getElementById("condition").innerHTML= "higher";
+            }
+
+            document.getElementById("empname").innerHTML = name;
+            document.getElementById("dept").innerHTML = department;
+            document.getElementById("hra").innerHTML = hr;
+            document.getElementById("pf").innerHTML = pf1;
+            document.getElementById("da").innerHTML = da1;
+            document.getElementById("total1").innerHTML = result;
+            document.getElementById("total2").innerHTML = result1;
+            document.getElementById("netsalary").innerHTML = netsal;
+        }
+    </script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                NAME 
+            </td>
+            <td>
+                <input type="text" id="name">
+            </td>    
+        </tr>
+        <tr>
+            <td>
+                DEPARTMENT
+            </td>
+            <td>
+                <select id="department">
+                    <option>Select Department</option>
+                    <option>Purchase Department</option>
+                    <option>Canteen&Staff Department</option>
+                    <option>Sales Department</option>
+                    <option>Accounting Department</option>
+                </select>
+            </td>    
+        </tr>
+        <tr>
+            <td>
+                SALARY 
+            </td>
+            <td>
+                <input type="text" id="salary">
+            </td>    
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="myfunction();">CLICK HERE</button>
+            </td>
+        </tr>
+    </table>
+   
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th colspan="4">
+                <img src="img/flower.jpg" height="150px" width="150px"/>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Name : <span id="empname"></span><br/>
+                Department : <span id="dept"></span><br/>
+            </td>
+            <td colspan="2">
+                Address : A-123, OM Infotech, near XYZ school, Katargam, Surat.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Earning
+            </td>
+            <td>
+                Amount
+            </td>
+            <td>
+                Deduction
+            </td>
+            <td>
+                Amount
+            </td>
+        </tr>
+         
+        <tr>
+            <td>
+                HRA(5%)
+            </td>
+            <td>
+                <span id="hra"></span>
+            </td>
+            <td>
+                P.F (18%)
+            </td>
+            <td>
+                <span id="pf"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                DA(5%)
+            </td>
+            <td>
+                <span id="da"></span>
+            </td>
+            <td>
+
+            </td>
+            <td>
+        
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                TOTAL
+            </td>
+            <td>
+                <span id="total1"></span>
+            </td>
+            <td>
+                TOTAL
+            </td>
+            <td>
+                <span id="total2"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                  NET SALARY :
+                <span id="netsalary"></span>
+            </td>
+            <td>
+                <span id="condition"></span>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

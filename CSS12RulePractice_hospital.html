@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 12 Rule Practice</title>
+    <link href="css/jquerysctipttop2.css" rel="stylesheet"/>
+    <link href="css/flickity.css" rel="stylesheet"/>
+
+    <link href="css/jquery-datepicker.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/jquerysctipttop.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-clockpicker.min.css">
+
+    <style>
+        .row
+        {
+            width: 100%;
+            clear: both;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-12
+        {
+            width: 100%;
+            float: left;
+        }
+        .col-11
+        {
+            width: 91.66%;
+            float: left;
+        }
+        .col-10
+        {
+            width: 83.33%;
+            float: left;
+        }
+        .col-9
+        {
+            width: 75%;
+            float: left;   
+        }
+        .col-8
+        {
+            width: 66.66%;
+            float:left;
+        }
+        .col-7
+        {
+            width: 58.33%;
+            float:left;
+        }
+        .col-6
+        {
+            width: 50%;
+            float:left;
+        }
+        .col-5
+        {
+            width:41.66%;
+            float:left;
+        }
+        .col-4
+        {
+            width: 33.33%;
+            float: left;
+        }
+        .col-3
+        {
+            width:25%;
+            float: left;
+        }
+        .col-2{
+            width: 16.66%;
+            float: left;
+        }
+        .col-1
+        {
+            width: 8.33%;
+            float: left;
+        }
+
+      
+        img.logo
+        {
+            border-radius: 50%;
+            text-align:center;
+        }
+        ul.menu
+        {
+            text-align: center;
+            background-color: lavender;
+        }
+        ul.menu li
+        {
+            display: inline-block;
+            margin-left: 30px;
+        }
+        ul.menu li a
+        {
+            text-decoration: none;
+            font-size: 25px;
+            color: #e91e63;
+            text-shadow: black;
+            position: relative;
+        }
+        ul.menu li a::after
+        {
+            content:'';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            border-radius: 5px;
+            height: 0.12em;
+            bottom: 0;
+            left: 0;
+            background: currentcolor;
+            transform-origin: bottom center;
+            transition: transform 0.3s ease-out;
+        }
+        ul.menu li a:hover::after 
+        {
+            transform: scaleX(1);
+            transform-origin: bottom center;
+            background-color: rgb(145, 7, 76);
+        }
+        a:hover
+        {
+            background-color:gainsboro;
+            color: rgb(6, 6, 95);
+        }
+    
+        .mt-10
+        {
+            margin-top: 10px;
+        }
+        .mt-20
+        {
+            margin-top: 20px;
+        }
+        .mb-30
+        {
+            margin-bottom: 30px;
+        }
+        .text-center
+        {
+            text-align: center;
+        }
+        .f-25
+        {
+            font-size: 25px;
+        }
+        .link a
+        {
+            text-decoration: none;
+        }
+
+        .border
+        {
+            border:2px solid black;
+        }
+        .textbox
+        {
+            height: 100px;
+            width: 75%;
+        }
+        #name
+        {
+            height: 20px;
+            width: 75%;
+        }
+        .text
+        {
+            height: 20px;
+            width: 50%;
+        }
+        .carousel img { width:100%;}
+        .slide { width:100%;height:450px;}
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="logo">
+        <div class="row">
+            <div class="col-4"><strong>E-MAIL : </strong>kjhg@gmail.com </div>
+            <div class="col-6">
+                <img class="logo" src="img/LOTUS.jpg"/ height="100px" width="100px">
+            </div>
+            <div class="col-2"><b>CONTACT NO : </b>9876543218</div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Menu -->
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <ul class="menu">
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                    
+                    </li>
+                    <li>
+                        <a href="#">PROJECT</a>
+                    </li>
+                    <li>
+                        <a href="#">SERVICES</a>
+                    </li>
+                    <li>
+                        <a href="#">SHOP</a>
+                    </li>
+                    <li>
+                        <a href="#">HELP</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Menu -->
+    
+     <!-- SLIDER -->
+     <section class="slider">
+        <div class="row mt-20 text-center">
+            <div class="col-12 mb-30">
+                <div class="carousel">
+                    <div class="slide"><img src="img/Slider.jpg"></div>
+                    <div class="slide"><img src="img/sliderImg2.jpg"></div>
+                    <div class="slide"><img src="img/sliderImg3.jpg"></div>
+                    <div class="slide"><img src="img/sliderImg4.jpg"></div>
+                    <div class="slide"><img src="img/sliderImg5.jpg"></div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <!-- SLIDER -->
+
+    <!--Services-->
+    <section class="row">
+        <div class="row">
+            <div class="col-4">
+                <h2>MULTI SPECIALITY </h2>
+                <img src="img/service1.jpg" height="200PX">
+                <p>
+                    A general term for a privately owned treatment centre often located
+                     on the same campus as the NHS hospital it serves, which provides 
+                     common elective (i.e. non-emergency) surgery and diagnostic procedures
+                    —e.g., hip and knee replacements, cataract surgery, MRIs, etc.
+                </p>
+            </div>
+
+            <div class="col-4">
+                <h2> SUPER SECUTITY </h2>
+                <img src="img/service2.jpg" height="200PX" width="400PX">
+                <p>
+                    As a hospital security officer, you protect staff, patients, 
+                    and visitors and ensure that all hospital property is secure.
+                     Your duties are to patrol the building and its grounds, monitor 
+                     all activity in and out of the hospital, and endeavor to prevent
+                    vandalism, theft, fire, and disturbances within the facility.
+                </p>
+            </div>
+            
+            
+            <div class="col-4">
+                <h2> HEALTH CARE </h2>
+                <img src="img/helthcare3.jpg" height="200px">
+                <p>
+                    Image result for description regarding health care in hospitals
+                    Health care refers to the efforts that medical professionals 
+                    make to restore our physical and mental well-being. ... 
+                    “[It] is the maintenance or improvement of health via the prevention,
+                    diagnosis, and treatment of disease, illness, injury, 
+                    and other physical and mental impairments in human beings.”
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h2> CITYSCAN FACILITIES </h2>
+                <img src="img/service4.jpg" width="420PX">
+                <p>
+                    A computerized tomography (CT) scan combines a series of X-ray
+                     images taken from different angles around your body and uses
+                      computer processing to create cross-sectional images (slices) of 
+                    the bones, blood vessels and soft tissues inside your body. 
+                    CT scan images provide more-detailed information than plain X-rays do.
+                </p>
+            </div>
+            <div class="col-4">
+                <h2> EMERGENCY FACILITIES  </h2>
+                <img src="img/service5.jpg" height="180PX">
+                <p>
+                    Emergency medical care can cut down fatality rate, improve
+                    treatment outcomes, reduce rehabilitation time, and optimize
+                    treatment costs for many patients. That is why an emergency
+                 room or ER is an indispensable part of any reputed, optimally sized hospital.
+                </p>
+            </div>
+            <div class="col-4">
+                <h2> HELIPAD FACILITIES</h2>
+                <img src="img/helipad6.jpg" height="180PX">
+                <p>
+                    Image result for helipad facilities in hospitals
+                    Helicopters can bring specialist care to the scene
+                    and transport patients to specialist hospitals, 
+                     especially for major trauma cases. Fixed-wing aircraft
+                    are used for long-distance transport. In some remote areas,
+                     air medical services deliver non-emergency healthcare such as
+                    general practitioner appointments.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--Services-->
+    
+    <!--Image/Texts-->
+    <section class="image">
+        <div class="row">
+            <div class="col-6 mt-10">
+                <img src="img/structure.jpg" height="250px" width="500px">
+            </div>
+            <div class="col-6 mt-20">
+                <p>
+                    Image result for description of interior of hospital
+                    Modern healthcare interiors are created on the premise 
+                    of evidence-based design, or the use of credible research
+                     to influence built environments so that patient outcomes improve.
+                      The research becomes more and more convincing all the time. It isn't 
+                      just medicine that makes you feel better.
+                </p>
+                <p>
+                    Image result for description of interior of hospital
+                    Interior design influences patients and visitors from 
+                    the moment they enter a hospital. These individuals may
+                     already be anxious, so the building's design shouldn't add more stress.
+                      ... Patients won't be hopeful that they'll get healthy if they are coming
+                       into a space that seems dirty. Furniture can impact visits, too.05
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--Image/Texts-->
+
+    <!--Text/Image-->
+    <section class="image">
+        <div class="row">
+            <div class="col-6 mt-20">
+                <p>
+                    hospitals include trauma centers, rehabilitation hospitals,
+                     children's hospitals, seniors' (geriatric) hospitals, and hospitals for
+                      dealing with specific medical needs such as psychiatric treatment
+                     (see psychiatric hospital) and certain disease categories.
+                </p>
+                <p>
+                    A health science facility smaller than a hospital is generally called 
+                    a clinic. Hospitals have a range of departments (e.g. surgery and urgent care) 
+                    and specialist units such as cardiology. Some hospitals have outpatient
+                     departments and some have chronic treatment units.
+                     Common support units include a pharmacy, pathology, and radiology.
+                </p>
+                <p>
+                    Hospitals have a range of departments (e.g. surgery and urgent care) 
+                    and specialist units such as cardiology. Some hospitals have outpatient
+                     departments and some have chronic treatment units.
+                     Common support units include a pharmacy, pathology, and radiology.
+                </p>
+            </div>
+            <div class="col-6">
+                <img src="img/healthcare.jpg" height="250px" width="650px" align="center" class="mt-10">
+            </div>
+        </div>
+    </section>
+    <!--Text/Image-->
+
+    <!--Video-->
+    <section class="video">
+        <div class="row">
+            <div class="col-12 text-center">
+                <iframe width="1000" height="350" class="mt-20" src="https://www.youtube.com/embed/owqHYffqx6k" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>    
+    <!--Video-->
+
+    <!--ICONS-->
+    <section class="icon">
+    <div class="row">
+        <div class="col-6">
+            <img src="img/icon_1.jpg" height="150px" width="150px">
+        </div>
+        <div class="col-6">
+            <img src="img/Icon_2.png" align="right"  height="150px" width="150px">
+        </div>
+    </div>
+    </section>
+    <!--ICONS-->
+
+    <!--ICONS-->
+     <section class="icon mt-20">
+        <div class="row mt-20">
+            <div class="col-12 text-center">
+                <img src="img/icon_3.png"  height="150px" width="150px">
+            </div>  
+        </div>
+    </section>
+    <!--ICONS-->
+
+    <!--ICONS-->
+     <section class="icon">
+        <div class="row">
+            <div class="col-6">
+                <img src="img/icon_4.jpg"  height="150px" width="150px">
+            </div>
+            <div class="col-6">
+                <img src="img/icon_5.png" align="right"  height="150px" width="150px">
+            </div>
+        </div>
+    </section>
+    <!--ICONS-->
+
+    <!--Image/Text-->
+    <section class="image">
+        <div class="row">
+            <div class="col-8 mt-20">
+                <img src="img/hospital_img.jpg" height="230px" width="750px">
+            </div>
+            <div class="col-4 f-25">
+                <ul>
+                    <li>Medical Services</li>
+                    <li>Surgical Services</li>
+                    <li>Obstetrical Services</li>
+                    <li>Anesthesiology Services</li>
+                    <li>Laboratory Services</li>
+                    <li>Paediatric Services</li>
+                    <li>Radiology Services</li>
+                    <li>Outpatient Department</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Image/Text-->
+    
+    <!--Form-->
+    <section class="form">
+        <div class="row">
+            <div class="col-12">
+                <form class="border">
+                    <h2>ENQUIRY FORM</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            NAME<br/><input id="name" type="text"  placeholder="Enter Your Full Name"/>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-6 mt-20">
+                            EMAIL ID<br/>
+                            <input class="text" type="email" placeholder="Enter Your Emali ID"/>
+                        </div>
+                        <div class="col-6 mt-20">
+                           CONTACT NUMBER<br/>
+                           <input class="text" type="tel" placeholder="Enter Your Contact Number"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mt-20">
+                            <div id="jquery-script-menu">
+                                <div class="jquery-script-center">
+                                
+                                <div class="jquery-script-ads">
+                                    <script type="text/javascript">
+                                        google_ad_client = "ca-pub-2783044520727903";
+                                        /* jQuery_demo */
+                                        google_ad_slot = "2780937993";
+                                        google_ad_width = 728;
+                                        google_ad_height = 90;
+                                        //-->
+                                    </script>
+                                
+                                </div>
+                                <div class="jquery-script-clear"></div>
+                                </div>
+                                </div>
+                                Appointment Date :
+                                  <div class="jquery-datepicker">
+                                      <input type="text" class="jquery-datepicker__input">
+                                  </div>      
+                        </div>
+                        <div class="col-2 mt-20">
+                            Appointment Time :
+                            <div class="input-group clockpicker">
+                                <input type="text" class="form-control" value="09:30">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="col-6 mt-20">
+                           LOCATIONS<br/>
+                                <select class="text">
+                                    <option>Select Location</option>
+                                    <option>Surat</option>
+                                    <option>Rajkot</option>
+                                    <option>Dang</option>
+                                    <option>A'bad</option>
+                                    <option>Vadodara</option>
+                                </select>
+                        </div>
+                        <div class="col-6 mt-20">
+                           HOSPITAL & CLINICS<br/>
+                                <select class="text">
+                                    <Option>Select Hospitals</Option>
+                                    <Option>Pramukh clinic</Option>
+                                    <Option>Prannath hospital</Option>
+                                    <Option>Kiran multi specialist hospital</Option>
+                                </select>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-12 mt-20">
+                            YOUR QUERY<br/>
+                            <textarea class="textbox" placeholder="Enter Your Quary"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--Form-->
+
+  
+    
+  
+
+    <!--Text/Image-->
+    <section>
+        <div class="row">
+            <div class="col-3 f-25 link mt-20">
+                <a href="#">Home</a><br/>
+                <a href="#">About us</a><br/>
+                <a href="#">HELP</a><br/>
+                <a href="#">Services</a><br/>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="col-3 link f-25 mt-20">
+                <a href="#">Home</a><br/>
+                <a href="#">About us</a><br/>
+                <a href="#">HELP</a><br/>
+                <a href="#">Services</a><br/>
+                <a href="#">Contact us</a><br/>
+            </div>
+            <div class="col-6 text-center mt-20">
+                <img src="img/functions.jpg" height="250px" width="500px"/>
+            </div>
+        </div>
+    </section>
+    <!--Text/Image-->
+
+    <!--Icon-->
+    <section class="icon">
+        <div class="row">
+            <div class="col-12 text-center mt-20">
+                <img src="img/ICON.png" height="250px" width="250px">
+            </div>
+        </div>
+    </section>
+    <!--Icon-->
+
+    <!--small icons-->
+    <footer>
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="img/Smallimg1.png" height="50px" width="50px">
+           
+                <img src="img/smallimg2.png" height="50px" width="50px">
+       
+                <img src="img/smallimg3.png" height="50px" width="50px">
+            
+                <img src="img/smallimg4.png" height="50px" width="50px">
+            </div>
+        </div>
+    </footer>
+    <!--small icons-->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/flickity.pkgd.js"></script>
+
+    <script src="js/jquery-datepicker.js"></script>
+    <script src="js/datepicker.js"></script>
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-clockpicker.min.js"></script>
+    <script type="text/javascript">
+        $('.clockpicker').clockpicker();
+    </script>
+</body>
+</html>

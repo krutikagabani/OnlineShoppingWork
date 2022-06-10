@@ -1,0 +1,23 @@
+body
+{
+    background-color: rgb(241, 205, 205);
+}
+/* Common */
+
+/* Home */
+h1
+{
+    color:blue !important;
+    /* font-size: 100px; */
+}
+
+
+/* About */
+p.border
+{
+    border: 1px solid black;
+}
+#about
+{
+    border: 2px dashed steelblue;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercise</title>
+    <script>
+        function exercise()
+        {
+            console.log("Name : Gabani Krutika");
+            console.log("E-mail : Kesar@123gmil.com");
+            console.log("Contact no. :9876543213");
+            console.log("Clg name : SPB English medium clg of commerce");
+            console.log("Address : 123, XYZ Soc. causeway road");
+        }
+
+        function plus()
+        {
+            var n1 = document.getElementById("textn1").value;
+            var n2 = document.getElementById("textn2").value;
+            var total = parseInt(n1) + parseInt(n2);
+
+            alert("Total:"+total);
+        }
+
+        function minus()
+        {
+            var n1 = document.getElementById("textn1").value;
+            var n2 = document.getElementById("textn2").value;
+            var total = parseInt(n1) - parseInt(n2);
+            
+            alert("Total:"+total);
+        }
+
+        
+        function multiply()
+        {
+            var n1 = document.getElementById("textn1").value;
+            var n2 = document.getElementById("textn2").value;
+            var total = parseInt(n1)*parseInt(n2);
+            
+            alert("Total:"+total);
+        }
+
+        
+        function divide()
+        {
+            var n1 = document.getElementById("textn1").value;
+            var n2 = document.getElementById("textn2").value;
+            var total = parseInt(n1) / parseInt(n2);
+            
+            alert("Total:"+total);
+        }
+        
+     
+    </script>
+</head>
+<body>
+    <button type="button" onclick="exercise();">Click Here for Details</button><br/><br/>
+
+    Number 1  <input type="text" id="textn1"><br/><br/>
+    Number 2  <input type="text" id="textn2"><br/><br/>
+
+    <button type="button" onclick="plus();">+</button>
+    <button type="button" onclick="minus();">-</button>
+    <button type="button" onclick="multiply();">*</button>
+    <button type="button" onclick="divide();">/</button>
+
+</body>
+</html>
+

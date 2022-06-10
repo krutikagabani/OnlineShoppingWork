@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern 5</title>
+
+    <script>
+        function pattern5()
+        {
+            var print="";
+            for(var i=1;i<=5;i++)
+            {
+                for(var k=5;k>=i;k--)
+                {
+                    print= print + "&nbsp;";
+                }
+                for(var j=1;j<=i;j++)
+                {
+                    print= print + "*";
+                }
+                print = print + "<br/>";
+                document.getElementById("star").innerHTML= print;
+            }
+          
+            for(var i=1;i<=4;i++)
+            {
+                for(var k=0;k<=i;k++)
+                {
+                    print= print + "&nbsp;";
+                }
+                for(var j=4;j>=i;j--)
+                {
+                    print= print + "*";
+                }
+                print= print + "<br/>";
+            }
+            document.getElementById("diamond").innerHTML= print;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="pattern5();">CLICK HERE</button>
+    
+    <h1 id="star"></h1>
+    <h1 id="diamond"></h1>
+</body>
+</html>

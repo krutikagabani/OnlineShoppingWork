@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Count vowels</title>
+    <script>
+        function countvowels()
+        {
+
+            //var i=0;
+            var count=0;
+            //var arr = [10,20,30];
+            //alert(arr.toString());
+            //alert(arr.length);
+          // alert(arr.join("|"));
+          //alert(arr.toString());
+          //arr.push(40);
+          //arr.pop();
+          //alert(arr.toString());
+        //    for(var i=0;i<arr.length;i++)
+        //    {
+        //        alert(arr[i]);
+        //    }
+
+            // var arr=[];
+            // arr[0]=10;
+            // arr[1]=20;
+            // arr[4]=30;
+
+            // alert(arr[4]);
+
+            // let text = document.getElementById("text1").value;
+            // document.getElementById("vowels").innerHTML = text.match(/[aeiou]/gi).length;
+
+        }
+
+
+
+        function countvowels()
+        {
+            var vowels = document.getElementById("text1").value;
+            var count = 0, totalvowels="";
+            for (var i=0;i<vowels.length;i++)
+            {
+                if(vowels.charAt(i).match(/[aeiouAEIOU]/))
+                {
+                    totalvowels = totalvowels + vowels.charAt(i);
+                    count++;
+                }
+            }
+            
+            document.getElementById("vowels").innerHTML= "Vowels :" + " " + totalvowels.length; 
+            
+        }
+        
+
+
+    </script>
+    <style>
+         #text2
+        {
+            width: 800px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    Enter The Text :
+    <input type="text" id="text1">
+    <button type="button" onclick="countvowels();">COUNT VOWELS</button>
+    <h1 id="vowels"></h1>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

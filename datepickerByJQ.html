@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatePicker</title>
+    <link href="https://www.jqueryscript.net/demo/Accessible-Data-Picker-Plugin-For-Bootstrap-ab-datepicker/css/datepicker.css" rel="stylesheet"/>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="container">
+        <h1>jQuery ab-datepicker Demo</h1>
+        <label id="date_label" for="date">Picke A Date</label>:
+        <input class="form-control" id="date" type="text" placeholder="" title="format : "/>
+        <div id="date-inline"></div>
+        </div>
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Accessible-Data-Picker-Plugin-For-Bootstrap-ab-datepicker/js/datepicker.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#date').datepicker({theme:'green'});
+        });
+    </script>
+</body>
+</html>

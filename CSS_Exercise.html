@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exercise</title>
+<style>
+    tr:hover
+    {
+        background-color:green;
+        color:white;
+    }
+
+    img:hover
+    {
+        border-radius: 50%;
+    }
+
+    #lotus:hover
+    {
+        filter: grayscale(100%);
+        border-radius: 0%;
+    }
+
+    .B1:hover
+    {
+        background-color:rgb(64, 20, 223);
+        color:white;
+    }
+
+    a {
+  display: inline-block;
+  position: relative;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background: currentcolor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+</style>
+   
+</head>
+<body>
+    
+    <table border="5" cellspacing="0" align="center">
+        <thead>
+            <tr>
+                <th>Day/period</th>
+                <th>I<br/>9:30-10:20</th>
+                <th>II<br/>10:20-11:10</th>
+                <th>III<br/>11:10-12:00</th>
+                <th>12:00-12:40</th>
+                <th>IV<br/>12:40-01:30</th>
+                <th>V<br/>1:30-02:20</th>
+                <th>VI<br/>2:20-03:10</th>
+                <th>VII<br/>3:10-4:00</th>
+            </tr>
+        </thead>
+            <tr align="center">
+                <th>Monday</th>
+                <td>Eng</td>
+                <td>Maths</td>
+                <td>Che</td>
+                <td rowspan="6" align="center">L<br/>U<br/>N<br/>C<br/>H</td>
+                <td colspan="3">LAB</td>
+                <td>Play</td>
+            </tr>
+        
+            <tr align="center">
+                <th>TUESDAY</th>
+                <td colspan="3">LAB</td>
+                <td>Eng</td>
+                <td>Che</td>
+                <td>Mat</td>
+                <td>SPORTS</td>
+            </tr>
+
+            <tr align="center">
+                <th>WEDNESDAY</th>
+                <td>MAT</td>
+                <td>Phy</td>
+                <td>Eng</td>
+                <td>che</td>
+                <td colspan="3">LIBRARY</td>
+            </tr>
+
+            <tr align="center">
+                <th>THURSDAY</th>
+                <td>MAT</td>
+                <td>Phy</td>
+                <td>Eng</td>
+                <td colspan="3">LAB</td>
+                <td>MATHS</td>
+            </tr>
+
+            <tr align="center">
+                <th>FRIDAY</th>
+                <td colspan="3">LAB</td>
+                <td>Phy</td>
+                <td>Eng</td>
+                <td>LAB</td>
+                <td>MATHS</td>.value
+            </tr>
+            <tr align="center">
+                <th>SATURDAY</th>
+                <td>MAT</td>
+                <td>Phy</td>
+                <td>Eng</td>
+                <td colspan="3">SEMINAR</td>
+                <td>SPORTS</td>
+            </tr>
+    </table><br/>
+
+    <img src="img/ROSE.jpg" height="200" width="200"/>
+
+    <img id="lotus" src="img/LOTUS.jpg" height="200" width="200"/><br/>
+
+    <input class="B1" type="button" value="CLECK HERE"/>
+    <input class="B1" type="button" value="SUBMIT"/> <br/>
+    
+    <a href="#">HOME PAGE</a><br/><br/>
+    <a href="#">ABOUT PAGE</a>
+
+</body>
+</html>

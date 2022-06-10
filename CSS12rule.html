@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 12 Rule</title>
+    <style>
+        .row
+        {
+            width: 100%;
+            clear: both;
+        }
+        .col-12
+        {
+            width: 100%;
+            float: left;
+        }
+        .col-11
+        {
+            width: 91.66%;
+            float: left;
+        }
+        .col-10
+        {
+            width: 83.33%;
+            float: left;
+        }
+        .col-9
+        {
+            width: 75%;
+            float: left;   
+        }
+        .col-8
+        {
+            width: 66.66%;
+            float:left;
+        }
+        .col-7
+        {
+            width: 58.33%;
+            float:left;
+        }
+        .col-6
+        {
+            width: 50%;
+            float:left;
+        }
+        .col-5
+        {
+            width:41.66%;
+            float:left;
+        }
+        .col-4
+        {
+            width: 33.33%;
+            float: left;
+        }
+        .col-3
+        {
+            width:25%;
+            float: left;
+        }
+        .col-2{
+            width: 16.66%;
+            float: left;
+        }
+        .col-1
+        {
+            width: 8.33%;
+            float: left;
+        }
+        .text-center
+        {
+            text-align: center;
+        }
+        ul.menu
+        {
+            text-align: right;
+        }
+        ul.menu li
+        {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        ul.menu li a
+        {
+            font-size: 25px;
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            color: #d81b60;
+        }
+        ul.menu li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            border-radius: 5px;
+            height: 0.10em;
+            bottom: 0;
+            left: 0;
+            background: currentcolor;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        ul.menu li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .mt-10
+        {
+            margin-top: 10px;
+        }
+        .mt-20
+        {
+            margin-top: 20px;
+        }
+        .service-img
+        {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="row">
+            <div class="col-2 text-center">
+                <img src="img/ROSE.jpg" height="100" width="100"/>
+            </div>
+            <div class="col-10">
+                <ul class="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- SLIDER -->
+    <section class="slider">
+        <div class="row">
+            <div class="col-12 text-center mt-20">
+                <img src="http://placehold.it/1250X400"/>
+            </div>
+        </div>
+    </section>
+    <!-- SLIDER -->
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="row">
+            <div class="col-4 text-center mt-10">
+                <img src="http://placehold.it/300X200" class="service-img"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam eos praesentium, aut quidem facilis amet numquam ipsum sequi corporis adipisci deserunt? Similique doloribus error, placeat fugiat blanditiis expedita nemo?</p>
+            </div>
+            <div class="col-4 text-center mt-10">
+                <img src="http://placehold.it/300X200" class="service-img"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam eos praesentium, aut quidem facilis amet numquam ipsum sequi corporis adipisci deserunt? Similique doloribus error, placeat fugiat blanditiis expedita nemo?</p>
+            </div>
+            <div class="col-4 text-center mt-10">
+                <img src="http://placehold.it/300X200" class="service-img"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam eos praesentium, aut quidem facilis amet numquam ipsum sequi corporis adipisci deserunt? Similique doloribus error, placeat fugiat blanditiis expedita nemo?</p>
+            </div>
+            <div class="col-4 text-center mt-10">
+                <img src="http://placehold.it/300X200" class="service-img"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam eos praesentium, aut quidem facilis amet numquam ipsum sequi corporis adipisci deserunt? Similique doloribus error, placeat fugiat blanditiis expedita nemo?</p>
+            </div>
+            <div class="col-4 text-center mt-10">
+                <img src="http://placehold.it/300X200" class="service-img"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam eos praesentium, aut quidem facilis amet numquam ipsum sequi corporis adipisci deserunt? Similique doloribus error, placeat fugiat blanditiis expedita nemo?</p>
+            </div>
+            <div class="col-4 text-center mt-10">
+                <img src="http://placehold.it/300X200" class="service-img"/>
+                <h2 class="service-heading">Web Development</h2>
+                <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quibusdam eos praesentium, aut quidem facilis amet numquam ipsum sequi corporis adipisci deserunt? Similique doloribus error, placeat fugiat blanditiis expedita nemo?</p>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES -->
+
+    <!-- VIDEO -->
+    <section class="video">
+        <div class="row">
+            <div class="col-12 text-center mt-20">
+                <iframe width="600" height="415" src="https://www.youtube.com/embed/JDNXYOHyOq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- VIDEO -->
+
+
+    <!-- IMAGE/TEXT -->
+    <section class="image">
+        <div class="row">
+            <div class="col-6 text-center mt-20">
+                <img src="http://placehold.it/400X400"/>
+            </div>
+            <div class="col-6 mt-20">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sequi magnam voluptatum exercitationem corrupti amet tempore odio hic ratione error quo necessitatibus, tenetur impedit aperiam earum minus provident assumenda maxime.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore distinctio non nostrum dolorem nesciunt velit recusandae fugit quidem nam. Ab ipsum beatae illum dolores modi! Adipisci sapiente voluptatum aspernatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur eum in alias aliquid! Hic iure earum dolor repellat autem harum sunt ratione veniam ducimus eveniet, suscipit temporibus error repudiandae officia?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore distinctio non nostrum dolorem nesciunt velit recusandae fugit quidem nam. Ab ipsum beatae illum dolores modi! Adipisci sapiente voluptatum aspernatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur eum in alias aliquid! Hic iure earum dolor repellat autem harum sunt ratione veniam ducimus eveniet, suscipit temporibus error repudiandae officia?</p>
+            </div>
+        </div>
+    </section>
+    <!-- IMAGE/TEXT -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="row">
+            <div class="col-3">LINKS</div>
+            <div class="col-3">LINKS</div>
+            <div class="col-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.6698409505807!2d72.7970571144103!3d21.205270687106097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c28ce1f89cd%3A0xd016bfc2b2f196d9!2sKaron%20Infotech!5e0!3m2!1sen!2sin!4v1640235368611!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+
+
+
+    <div class="row">
+        <div class="col-4">
+            <img src="http://placehold.it/300X600"/>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">1</div>
+                        <div class="col-2">1</div>
+                        <div class="col-2">1</div>
+                        <div class="col-2">1</div>
+                        <div class="col-2">1</div>
+                        <div class="col-2">1</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="http://placehold.it/300X300"/>
+                </div>
+                <div class="col-6">
+                    <img src="http://placehold.it/300X300"/>
+                </div>
+                <div class="col-6">
+                    <img src="http://placehold.it/300X300"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
